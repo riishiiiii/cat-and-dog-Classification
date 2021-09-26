@@ -11,7 +11,7 @@ def app():
         model = load_model()
 
     file = st.file_uploader(
-        "Please upload a Picture of CAT or DOG ", type=["jpg", "png"])
+        "Please upload a Picture of CAT or DOG ", type=["jpg", "jpeg", "png"])
     st.set_option('deprecation.showfileUploaderEncoding', False)
 
     if file is None:
