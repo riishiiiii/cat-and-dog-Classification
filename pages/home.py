@@ -7,4 +7,4 @@ def app():
             # Cat and Dog Classification
             """
              )
-    st.image("catordog .png", width=600)
+    st.image("catordog .png")
