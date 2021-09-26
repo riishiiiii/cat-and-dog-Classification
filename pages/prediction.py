@@ -17,15 +17,19 @@ def app():
     if file is None:
         st.text("Please upload an image file")
     else:
-        pic = Image.open(file)
-        # pic_size = pic.resize((100, 100))
-        st.image(pic, use_column_width=True)
-        test_img = tf.image.resize(pic, [64, 64])
-        img = keras.preprocessing.image.img_to_array(test_img)
-        img = np.expand_dims(img, axis=0)
-        r = model.predict(img)
-        if r[0][0] == 1:
-            pred = "It's a DOG"
-        else:
-            pred = "It's a CAT"
-        st.success(pred)
+        try:
+            pic = Image.open(file)
+            # pic_size = pic.resize((100, 100))
+            st.image(pic, use_column_width=True)
+            test_img = tf.image.resize(pic, [64, 64])
+            img = keras.preprocessing.image.img_to_array(test_img)
+            img = np.expand_dims(img, axis=0)
+
+            r = model.predict(img)
+            if r[0][0] == 1:
+                pred = "It's a DOG"
+            else:
+                pred = "It's a CAT"
+            st.success(pred)
+        except:
+            st.error("Invalid Image Type For This Model")
