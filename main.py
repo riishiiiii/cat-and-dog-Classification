@@ -4,11 +4,13 @@ import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 import keras.preprocessing
-from pages import home, prediction
+from pages import home, prediction, about
 pages = {
     "Home": home,
-    "Prediction": prediction
+    "Prediction": prediction,
+    "About": about
 }
+
 
 
 st.sidebar.title("Navigation")
