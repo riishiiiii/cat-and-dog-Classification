@@ -7,4 +7,4 @@ def app():
         '''### GitHub Repository: [cat-and-dog-Classification](https://github.com/riishiiiii/cat-and-dog-Classification)''')
 
     st.markdown(
-        '''### Source code: [Notebook](https://www.kaggle.com/riishiiiii/cat-and-dog-classfication?scriptVersionId=76760469)''')
+        '''### Source code: [Notebook](https://www.kaggle.com/riishiiiii/cat-vs-dog-classification/notebook?scriptVersionId=76925609)''')
